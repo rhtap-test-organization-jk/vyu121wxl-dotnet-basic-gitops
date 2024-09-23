@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: vyu121wxl-dotnet-basic-gitops
+  description: This is GitOps manifest for vyu121wxl-dotnet-basic   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: vyu121wxl-dotnet-basic
+    jenkins.io/job-full-name: vyu121wxl-dotnet-basic-gitops
+    backstage.io/kubernetes-id: vyu121wxl-dotnet-basic 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:vyu121wxl-dotnet-basic
